@@ -5,6 +5,11 @@ from umap import UMAP
 
 class EmbeddedData:
     def __init__(self, X_train, X_test, y_train, y_test, perplexity=40):
+        '''
+        The function takes in a standard train, 
+        test split for classification problems and 
+        stores 5 type of embedding in dictionary form
+        '''
         self.raw_data = {
             'X_train': X_train,
             'y_train': X_test,
