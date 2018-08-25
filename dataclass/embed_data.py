@@ -45,7 +45,7 @@ class EmbeddedData:
     def umap_function(self, semi_super=True):
         umap = UMAP()
         X_train = umap.fit_transform(
-            self.raw_data["X_train"], y=self.raw_data['y_test']) if semi_super else umap.fit_transform(self.raw_data["X_train"])
+            self.raw_data["X_train"], y=self.raw_data['y_train']) if semi_super else umap.fit_transform(self.raw_data["X_train"])
         X_test = umap.transform(self.raw_data["X_test"])
 
         d_data = {
@@ -86,7 +86,7 @@ class EmbeddedData:
             "tsne_dim": (self.tsne_data["X_train"].shape, self.tsne_data["X_test"].shape),
         }
         s = ''
-        for k, dim in dim_sum:
+        for k, dim in dim_sum.items():
             s += f'For {k} the new dimension are, train: {dim[0]}, test: {dim[1]}\n'
 
         return s
