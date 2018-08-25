@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-setup(name='python_utils',
+setup(name='python_ian_utils',
       version='1.0',
       description='Python Distribution Utilities',
       author='Andrea Titton',
